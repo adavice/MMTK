@@ -1,0 +1,140 @@
+.slider {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+}
+
+.slide_viewer {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-size: cover !important;
+
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.slide:nth-of-type(1) {
+  background: url(../images/office1.jpg);
+  background-position: center;
+}
+
+.slide:nth-of-type(2) {
+  background: url(../images/office2.jpg);
+  background-position: top;
+}
+
+.slide:nth-of-type(3) {
+  background: #C75534;
+}
+
+.slide:nth-of-type(4) {
+  background: #D1D1D4;
+}
+
+.slide_buttons {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  bottom: 20px;
+  z-index: 80;
+}
+
+a.slide_btn {
+  color: #ffffff40;
+  font-size: 42px;
+  margin: 0 0.175em;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide_btn.active, .slide_btn:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.directional_nav {
+    width: 230px;
+    height: 88px;
+    bottom: 0px;
+    right: 0;
+    max-width: 940px;
+    position: absolute;
+    z-index: 85;
+}
+
+.previous_btn {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+.next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.previous_btn, .next_btn {
+    border: 1px solid #fff;
+    display: flex;
+    cursor: pointer;
+    height: 65px;
+    opacity: 1;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    width: 50%;
+    height: 100%;
+    background: var(--main-color);
+}
+
+.previous_btn span, .next_btn span {
+    margin: auto;
+}
+
+.previous_btn:hover, .next_btn:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+.directional_nav {
+  width: 100vw;
+  height: 100%;
+  opacity: 0;
+}
+#navigation {
+  pointer-events: none;
+}
+#navigation * {
+  pointer-events: auto;
+}
+}
